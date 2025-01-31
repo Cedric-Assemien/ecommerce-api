@@ -47,14 +47,15 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('boutique/', include('boutique.urls')),
+    path('', include('boutique.urls')),
     path('customer/', include('customer.urls')),
-    path('shop/', include('shop.urls')),
-   
+    path('shop/', include('shop.urls')),   
     path('api-auth/', include('rest_framework.urls')),
-    path("api/register/", RegisterView.as_view(), name="rest_register"),
-    path("api/login/", LoginView.as_view(), name="rest_login"),
-    path("api/logout/", LogoutView.as_view(), name="rest_logout"),
+    path('auth/', include('dj_rest_auth.urls')),
+    path('auth/registration/', include('dj_rest_auth.registration.urls')),
+    # path("api/register/", RegisterView.as_view(), name="rest_register"),
+    # path("api/login/", LoginView.as_view(), name="rest_login"),
+    # path("api/logout/", LogoutView.as_view(), name="rest_logout"),
     path("api/user/", UserDetailsView.as_view(), name="rest_user_details"),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),

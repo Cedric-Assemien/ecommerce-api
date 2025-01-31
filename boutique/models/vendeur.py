@@ -6,8 +6,8 @@ User = get_user_model()
 class VendeurModel(models.Model):
 
     class Meta:
-        verbose_name = "Tag"
-        verbose_name_plural = "Tags"
+        verbose_name = "vendeur"
+        verbose_name_plural = "vendeurs"
 
     nom = models.CharField(max_length=254, verbose_name="Nom")
 
