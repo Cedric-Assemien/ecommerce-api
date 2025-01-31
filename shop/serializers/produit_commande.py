@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from shop.models import ProduitCommandeModel
+from shop.models.produit_commande import ProduitCommandeModel
 
 class ProduitCommandeModelSerializer(serializers.ModelSerializer):
     total_ligne = serializers.ReadOnlyField()

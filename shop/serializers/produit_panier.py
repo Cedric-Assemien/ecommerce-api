@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from shop.models import ProduitPanierModel
+from shop.models.produit_panier import ProduitPanierModel
 
 class ProduitPanierModelSerializer(serializers.ModelSerializer):
     total_ligne = serializers.ReadOnlyField()

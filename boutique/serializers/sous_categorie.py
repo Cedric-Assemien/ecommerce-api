@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from boutique.models import SousCategorieModel
+from boutique.models.sous_categorie import SousCategorieModel
 
 class SousCategorieModelSerializer(serializers.ModelSerializer):
     class Meta:

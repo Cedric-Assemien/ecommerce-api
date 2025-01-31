@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from customer.models import AdresseModel
+from customer.models.adresse_de_livraison import AdresseModel
 
 class AdresseModelSerializer(serializers.ModelSerializer):
     class Meta:

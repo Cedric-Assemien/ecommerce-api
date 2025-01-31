@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from boutique.models import TagModel
+from boutique.models.tag import TagModel
 
 class TagModelSerializer(serializers.ModelSerializer):
     class Meta:

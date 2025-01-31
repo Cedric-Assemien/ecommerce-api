@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from shop.models import CommandeModel
+from shop.models.commande import CommandeModel
 
 class CommandeModelSerializer(serializers.ModelSerializer):
     total = serializers.ReadOnlyField()

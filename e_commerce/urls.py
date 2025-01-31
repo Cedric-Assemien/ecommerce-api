@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings 
 from django.conf.urls.static import static
-
 from dj_rest_auth.registration.views import RegisterView
 from dj_rest_auth.views import LoginView, LogoutView, UserDetailsView
 from rest_framework import permissions
@@ -43,11 +42,15 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
 )
 
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('shop.urls')),
-    path('account/', include('customer.urls')),
     path('boutique/', include('boutique.urls')),
+    path('customer/', include('customer.urls')),
+    path('shop/', include('shop.urls')),
+   
     path('api-auth/', include('rest_framework.urls')),
     path("api/register/", RegisterView.as_view(), name="rest_register"),
     path("api/login/", LoginView.as_view(), name="rest_login"),

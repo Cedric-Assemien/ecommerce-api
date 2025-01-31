@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from shop.models import PanierModel
+from shop.models.panier import PanierModel
 
 class PanierModelSerializer(serializers.ModelSerializer):
     total = serializers.ReadOnlyField()

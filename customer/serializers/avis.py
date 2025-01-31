@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from customer.models import AvisModel
+from customer.models.avis import AvisModel
 
 class AvisModelSerializer(serializers.ModelSerializer):
     class Meta:
